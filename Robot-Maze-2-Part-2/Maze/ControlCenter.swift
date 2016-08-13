@@ -35,7 +35,6 @@ class ControlCenter {
             continueStraightOrRotate(mazeRobot)
         }
         
-        // Step 2.3b
         // If the robot encounters a two way path and there is NO wall ahead it should continue forward.
         else if isTwoWayPath && !robotIsBlocked {
             mazeRobot.move()
@@ -50,8 +49,13 @@ class ControlCenter {
         // Dead end - else-if statements
         
         // TODO: If the robot encounters a dead end and there is NO wall ahead it should move forward.
-        
-        // TODO: If the robot encounters a dead end and there IS a wall ahead it should rotateRight().
+        else if isDeadEnd && !robotIsBlocked {
+            mazeRobot.move()
+        }
+        // TODO: If the robot encounters a dead end and there IS a wall ahead it should rotateRight()
+        else if isDeadEnd && robotIsBlocked {
+            mazeRobot.rotateRight()
+        }
         
 
     }
