@@ -25,30 +25,26 @@ class ControlCenter {
         print(isTwoWayPath)
         print(isDeadEnd)
         
-        // Step 2.3a
-        
         // If the robot encounters a three way junction and there IS a wall ahead, it should randomly rotate right or left
         if isThreeWayJunction && robotIsBlocked {
             randomlyRotateRightOrLeft(mazeRobot)
         }
         
         // If the robot encounters a three way junction and there is NO wall ahead, it should continue straight or rotate (you need to write this else-if statement)
-        
         else if isThreeWayJunction && !robotIsBlocked {
             continueStraightOrRotate(mazeRobot)
         }
         
-        
-        // TODO:
-        
-        
         // Step 2.3b
-        // Two-way Path - else-if statements
-        
-        // TODO: If the robot encounters a two way path and there is NO wall ahead it should continue forward.
-        
-        // TODO: If the robot encounters a two way path and there IS a wall ahead, it should randomly rotate.
-        
+        // If the robot encounters a two way path and there is NO wall ahead it should continue forward.
+        else if isTwoWayPath && !robotIsBlocked {
+            mazeRobot.move()
+        }
+            
+        // If the robot encounters a two way path and there IS a wall ahead, it should randomly rotate.
+        else if isTwoWayPath && robotIsBlocked {
+            randomlyRotateRightOrLeft(mazeRobot)
+        }
         
         // Step 2.3c
         // Dead end - else-if statements
@@ -57,25 +53,6 @@ class ControlCenter {
         
         // TODO: If the robot encounters a dead end and there IS a wall ahead it should rotateRight().
         
-        
-        
-        
-        /*
-         if isThreeWayJunction && robotIsBlocked {
-         randomlyRotateRightOrLeft(robot)
-         } else if  isThreeWayJunction && !robotIsBlocked {
-         continueStraightOrRotate(robot, wallInfo: myWallInfo)
-         } else if isTwoWayPath && !robotIsBlocked {
-         robot.move()
-         } else if isTwoWayPath && robotIsBlocked {
-         turnTowardClearPath(robot, wallInfo: checkWalls(robot))
-         } else if isDeadEnd && !robotIsBlocked {
-         robot.move()
-         } else if isDeadEnd && robotIsBlocked {
-         robot.rotateRight()
-         }
-         
-         */
 
     }
     
