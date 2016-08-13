@@ -53,7 +53,18 @@ extension ControlCenter {
             numberOfWalls += 1
         }
         
-        // You may want to paste your Part 2 implementation of checkWalls() here
-        return (false, false, false, false, 0)
+        // Check if there is a wall at the bottom of the current cell
+        let isWallDown = cell.bottom
+        if isWallDown {
+            numberOfWalls += 1
+        }
+        
+        // Check if there is a wall to the right of the current cell
+        let isWallLeft = cell.left
+        if isWallLeft {
+            numberOfWalls += 1
+        }
+        
+        return (isWallUp, isWallRight, isWallDown, isWallLeft, numberOfWalls)
     }
 }

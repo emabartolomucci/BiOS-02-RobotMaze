@@ -32,7 +32,6 @@ extension ControlCenter {
 
     func turnTowardClearPath(robot: ComplexRobotObject, wallInfo: (up: Bool, right: Bool, down: Bool, left: Bool, numberOfWalls: Int)) {
         
-        // Step 3.1
         if robot.direction == .Left && wallInfo.down {
             robot.rotateRight()
         } else if robot.direction == .Up && wallInfo.left {
