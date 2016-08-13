@@ -21,8 +21,7 @@ class ControlCenter {
         }
         
         // Step 2.1c
-        // TODO: Save the return value of checkWalls() to a constant called myWallInfo.
-        
+        var myWallInfo = checkWalls(mazeRobot)
         
         // Step 2.2a
         // Categorize the robot's current location based on the number of walls
