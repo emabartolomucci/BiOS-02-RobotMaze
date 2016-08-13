@@ -2,8 +2,7 @@
 //  ControlCenter.swift
 //  Maze
 //
-//  Created by Jarrod Parkes on 8/14/15.
-//  Copyright © 2015 Udacity, Inc. All rights reserved.
+//  Edited by Emanuele Bartolomucci on 2016/08/13.
 //
 import UIKit
 
