@@ -14,9 +14,27 @@ extension ControlCenter {
         let cell = mazeController.currentCell(robot)
         var isWall: Bool = false
         
-        // You may want to paste your Part 1 implementation of isFacingWall() here
+        switch(direction) {
+        case .Up:
+            if cell.top {
+                isWall = true
+            }
+        case .Right:
+            if cell.right {
+                isWall = true
+            }
+        case .Down:
+            if cell.bottom {
+                isWall = true
+            }
+        case .Left:
+            if cell.left {
+                isWall = true
+            }
+            
+        }
         
-        return false
+        return isWall
     }
     
     func checkWalls(robot:ComplexRobotObject) -> (up: Bool, right: Bool, down: Bool, left: Bool, numberOfWalls: Int) {
