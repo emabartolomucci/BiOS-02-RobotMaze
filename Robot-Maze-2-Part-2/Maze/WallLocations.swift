@@ -65,7 +65,6 @@ extension ControlCenter {
             numberOfWalls += 1
         }
         
-        // Step 2.1b
         return (isWallUp, isWallRight, isWallDown, isWallLeft, numberOfWalls)
     }
 }
