@@ -10,9 +10,15 @@ class ControlCenter {
 
     var mazeController: MazeController!
     
-    func moveComplexRobot(myRobot: ComplexRobotObject) {
-      
-    // You may want to paste your Part 1 implementation of moveComplexRobot() here
+    func moveComplexRobot(mazeRobot: ComplexRobotObject) {
+
+        let robotIsBlocked = isFacingWall(mazeRobot, direction: mazeRobot.direction)
+
+        if robotIsBlocked {
+            randomlyRotateRightOrLeft(mazeRobot)
+        } else {
+            continueStraightOrRotate(mazeRobot)
+        }
         
         // Step 2.1c
         // TODO: Save the return value of checkWalls() to a constant called myWallInfo.
