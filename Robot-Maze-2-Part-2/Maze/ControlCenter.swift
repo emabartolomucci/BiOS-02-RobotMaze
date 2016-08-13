@@ -12,17 +12,20 @@ class ControlCenter {
     
     func moveComplexRobot(mazeRobot: ComplexRobotObject) {
 
-        let robotIsBlocked = isFacingWall(mazeRobot, direction: mazeRobot.direction)
+        // let robotIsBlocked = isFacingWall(mazeRobot, direction: mazeRobot.direction)
 
         let myWallInfo = checkWalls(mazeRobot)
         
-        // Step 2.2a
         let isThreeWayJunction = (myWallInfo.numberOfWalls == 1)
         let isTwoWayPath = (myWallInfo.numberOfWalls == 2)
         let isDeadEnd = (myWallInfo.numberOfWalls == 3)
 
+ 
         // Step 2.2b
         // Test whether the values of the above constants are correct
+        print(isThreeWayJunction)
+        print(isTwoWayPath)
+        print(isDeadEnd)
         
         // Step 2.3a
         // Three-way Path - else-if statements
