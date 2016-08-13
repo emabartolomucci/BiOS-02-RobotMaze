@@ -4,6 +4,7 @@
 //
 //  Edited by Emanuele Bartolomucci on 2016/08/13.
 //
+
 import UIKit
 
 class ControlCenter {
@@ -16,41 +17,29 @@ class ControlCenter {
         
         let myWallInfo = checkWalls(mazeRobot)
         
+        // Rubric's step 3
+        
         let isThreeWayJunction = (myWallInfo.numberOfWalls == 1)
         let isTwoWayPath = (myWallInfo.numberOfWalls == 2)
         let isDeadEnd = (myWallInfo.numberOfWalls == 3)
         
-        // Test whether the values of the above constants are correct
         print(isThreeWayJunction)
         print(isTwoWayPath)
         print(isDeadEnd)
+
+        // Rubric's step 4
         
-        // If the robot encounters a three way junction and there IS a wall ahead, it should randomly rotate right or left
         if isThreeWayJunction && robotIsBlocked {
             randomlyRotateRightOrLeft(mazeRobot)
-        }
-            
-            // If the robot encounters a three way junction and there is NO wall ahead, it should continue straight or rotate (you need to write this else-if statement)
-        else if isThreeWayJunction && !robotIsBlocked {
+        } else if isThreeWayJunction && !robotIsBlocked {
             continueStraightOrRotate(mazeRobot, wallInfo: myWallInfo)
-        }
-            
-            // If the robot encounters a two way path and there is NO wall ahead it should continue forward.
-        else if isTwoWayPath && !robotIsBlocked {
+        } else if isTwoWayPath && !robotIsBlocked {
             mazeRobot.move()
-        }
-            
-            // If the robot encounters a two way path and there IS a wall ahead, it should randomly rotate.
-        else if isTwoWayPath && robotIsBlocked {
+        } else if isTwoWayPath && robotIsBlocked {
             turnTowardClearPath(mazeRobot, wallInfo: checkWalls(mazeRobot))
-        }
-            
-            // If the robot encounters a dead end and there is NO wall ahead it should move forward.
-        else if isDeadEnd && !robotIsBlocked {
+        } else if isDeadEnd && !robotIsBlocked {
             mazeRobot.move()
-        }
-            // If the robot encounters a dead end and there IS a wall ahead it should rotateRight()
-        else if isDeadEnd && robotIsBlocked {
+        } else if isDeadEnd && robotIsBlocked {
             mazeRobot.rotateRight()
         }
     }

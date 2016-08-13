@@ -27,7 +27,6 @@ extension ControlCenter {
         } else {
             turnTowardClearPath(robot, wallInfo: wallInfo)
         }
-
     }
 
     func turnTowardClearPath(robot: ComplexRobotObject, wallInfo: (up: Bool, right: Bool, down: Bool, left: Bool, numberOfWalls: Int)) {
@@ -52,7 +51,6 @@ extension ControlCenter {
         else {
             robot.rotateLeft()
         }
-
     }
-
+    
 }
