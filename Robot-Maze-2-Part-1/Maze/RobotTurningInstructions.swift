@@ -2,8 +2,7 @@
 //  RobotTurningInstructions.swift
 //  Maze
 //
-//  Created by Gabrielle Miller-Messner on 11/5/15.
-//  Copyright © 2015 Udacity, Inc. All rights reserved.
+//  Edited by Emanuele Bartolomucci on 2016/08/13.
 //
 
 import Foundation
