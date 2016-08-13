@@ -15,10 +15,13 @@ class ControlCenter {
         
         // Step 1.1c
         // TODO: Call the function, isFacingWall(), and define a constant to be equal to its return value. You can use the suggested constant name below--uncomment the code and add the function call.
-        // let robotIsBlocked =
+        let robotIsBlocked = isFacingWall(myRobot, direction: myRobot.direction)
+        
         
         // Step 1.1d
         // TODO: Test the isFacingWall() function. Be sure to comment out or delete your test code once you are finished testing!
+        
+        
     
         // Step 1.4
         // TODO: Write an if statement that enables the robot to choose how to move. Use the pseudocode below as a guide.
