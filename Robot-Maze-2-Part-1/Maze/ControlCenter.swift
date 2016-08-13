@@ -21,7 +21,7 @@ class ControlCenter {
           if robotIsBlocked {
                 randomlyRotateRightOrLeft(mazeRobot)
             } else {
-                mazeRobot.move()
+                continueStraightOrRotate(mazeRobot)
             }
 
     
