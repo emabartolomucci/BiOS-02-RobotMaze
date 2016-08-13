@@ -45,19 +45,15 @@ class ControlCenter {
             randomlyRotateRightOrLeft(mazeRobot)
         }
         
-        // Step 2.3c
-        // Dead end - else-if statements
-        
-        // TODO: If the robot encounters a dead end and there is NO wall ahead it should move forward.
+        // If the robot encounters a dead end and there is NO wall ahead it should move forward.
         else if isDeadEnd && !robotIsBlocked {
             mazeRobot.move()
         }
-        // TODO: If the robot encounters a dead end and there IS a wall ahead it should rotateRight()
+        // If the robot encounters a dead end and there IS a wall ahead it should rotateRight()
         else if isDeadEnd && robotIsBlocked {
             mazeRobot.rotateRight()
         }
         
-
     }
     
     func previousMoveIsFinished(robot: ComplexRobotObject) {
