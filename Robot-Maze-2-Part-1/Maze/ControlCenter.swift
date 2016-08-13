@@ -11,19 +11,19 @@ class ControlCenter {
 
     var mazeController: MazeController!
 
-    func moveComplexRobot(myRobot: ComplexRobotObject) {
+    func moveComplexRobot(mazeRobot: ComplexRobotObject) {
         
         // Step 1.1c
-        let robotIsBlocked = isFacingWall(myRobot, direction: myRobot.direction)
+        let robotIsBlocked = isFacingWall(mazeRobot, direction: mazeRobot.direction)
         
         
         // Step 1.1d
-/*        if robotIsBlocked {
-            myRobot.rotateRight()
-        } else {
-            myRobot.move()
-        }*/
-        
+          if robotIsBlocked {
+                randomlyRotateRightOrLeft(mazeRobot)
+            } else {
+                mazeRobot.move()
+            }
+
     
         // Step 1.4
         // TODO: Write an if statement that enables the robot to choose how to move. Use the pseudocode below as a guide.
