@@ -18,22 +18,19 @@ class ControlCenter {
         
         
         // Step 1.1d
-          if robotIsBlocked {
+/*        if robotIsBlocked {
                 randomlyRotateRightOrLeft(mazeRobot)
             } else {
-                continueStraightOrRotate(mazeRobot)
+                mazeRobot.move()
             }
-
+*/
     
         // Step 1.4
-        // TODO: Write an if statement that enables the robot to choose how to move. Use the pseudocode below as a guide.
-        
-        // Pseudocode
-//         if the robot is blocked {
-//             then randomly rotate
-//         } otherwise {
-//             either continue straight or randomly rotate
-//         }
+        if robotIsBlocked {
+            randomlyRotateRightOrLeft(mazeRobot)
+        } else {
+            continueStraightOrRotate(mazeRobot)
+        }
     }
         
     func previousMoveIsFinished(robot: ComplexRobotObject) {
