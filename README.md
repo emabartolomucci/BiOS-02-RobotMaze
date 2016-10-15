@@ -4,4 +4,4 @@
 
 ![Platform iOS](https://img.shields.io/badge/nanodegree-iOS-blue.svg)
 
-This repository contains the final code submitted for the second project of Udacity's Beginning iOS App Development Nanodegree.
+This repository contains the final code submitted for the second project of Udacity's BiOS Nanodegree.
